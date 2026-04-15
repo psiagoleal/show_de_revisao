@@ -1,0 +1,164 @@
+{
+  "perguntas": [
+    {
+      "texto": "Qual é a capital do Brasil?",
+      "alternativas": {
+        "A": "São Paulo",
+        "B": "Rio de Janeiro",
+        "C": "Brasília",
+        "D": "Salvador"
+      },
+      "correta": "C"
+    },
+    {
+      "texto": "Quem pintou a obra 'Mona Lisa'?",
+      "alternativas": {
+        "A": "Michelangelo",
+        "B": "Leonardo da Vinci",
+        "C": "Rafael Sanzio",
+        "D": "Donatello"
+      },
+      "correta": "B"
+    },
+    {
+      "texto": "Qual é o maior planeta do Sistema Solar?",
+      "alternativas": {
+        "A": "Saturno",
+        "B": "Netuno",
+        "C": "Júpiter",
+        "D": "Urano"
+      },
+      "correta": "C"
+    },
+    {
+      "texto": "Em que ano o Brasil foi descoberto?",
+      "alternativas": {
+        "A": "1498",
+        "B": "1500",
+        "C": "1502",
+        "D": "1510"
+      },
+      "correta": "B"
+    },
+    {
+      "texto": "Qual é o elemento químico representado pelo símbolo 'O'?",
+      "alternativas": {
+        "A": "Ouro",
+        "B": "Ósmio",
+        "C": "Oxigênio",
+        "D": "Olívio"
+      },
+      "correta": "C"
+    },
+    {
+      "texto": "Quem escreveu 'Dom Casmurro'?",
+      "alternativas": {
+        "A": "José de Alencar",
+        "B": "Machado de Assis",
+        "C": "Monteiro Lobato",
+        "D": "Castro Alves"
+      },
+      "correta": "B"
+    },
+    {
+      "texto": "Qual é a fórmula da água?",
+      "alternativas": {
+        "A": "CO2",
+        "B": "NaCl",
+        "C": "H2O",
+        "D": "O2"
+      },
+      "correta": "C"
+    },
+    {
+      "texto": "Quantos estados tem o Brasil?",
+      "alternativas": {
+        "A": "24",
+        "B": "25",
+        "C": "26",
+        "D": "27"
+      },
+      "correta": "C"
+    },
+    {
+      "texto": "Qual é o rio mais longo do mundo?",
+      "alternativas": {
+        "A": "Rio Amazonas",
+        "B": "Rio Nilo",
+        "C": "Rio Yangtzé",
+        "D": "Rio Mississippi"
+      },
+      "correta": "A"
+    },
+    {
+      "texto": "Qual o resultado de 7 × 8?",
+      "alternativas": {
+        "A": "54",
+        "B": "56",
+        "C": "58",
+        "D": "64"
+      },
+      "correta": "B"
+    },
+    {
+      "texto": "Em qual continente fica o Egito?",
+      "alternativas": {
+        "A": "Ásia",
+        "B": "Europa",
+        "C": "África",
+        "D": "Oceania"
+      },
+      "correta": "C"
+    },
+    {
+      "texto": "Qual é a língua oficial de Moçambique?",
+      "alternativas": {
+        "A": "Inglês",
+        "B": "Francês",
+        "C": "Espanhol",
+        "D": "Português"
+      },
+      "correta": "D"
+    },
+    {
+      "texto": "Qual instrumento mede a temperatura?",
+      "alternativas": {
+        "A": "Barômetro",
+        "B": "Termômetro",
+        "C": "Higrômetro",
+        "D": "Anemômetro"
+      },
+      "correta": "B"
+    },
+    {
+      "texto": "Quem proclamou a independência do Brasil?",
+      "alternativas": {
+        "A": "Dom João VI",
+        "B": "Tiradentes",
+        "C": "Dom Pedro I",
+        "D": "Marechal Deodoro"
+      },
+      "correta": "C"
+    },
+    {
+      "texto": "Qual é o menor país do mundo?",
+      "alternativas": {
+        "A": "Mônaco",
+        "B": "Malta",
+        "C": "San Marino",
+        "D": "Vaticano"
+      },
+      "correta": "D"
+    },
+    {
+      "texto": "Quantos lados tem um hexágono?",
+      "alternativas": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8"
+      },
+      "correta": "B"
+    }
+  ]
+}

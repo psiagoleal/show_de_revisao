@@ -1,0 +1,33 @@
+{
+    "titulo": "Show de Questão",
+    "rodadas": 16,
+    "premio": {
+        "nome": "pontos",
+        "icone": "⭐",
+        "valores": [
+            100, 200, 300, 500, 1000, 2000, 3000, 5000, 10000, 20000, 30000,
+            50000, 100000, 300000, 500000, 1000000
+        ]
+    },
+    "ajudas": {
+        "universitarios": true,
+        "cartas": true,
+        "pular": 3
+    },
+    "checkpoints": [0, 5, 10],
+    "timer": {
+        "habilitado": false,
+        "segundos": 30
+    },
+    "sons": {
+        "inicio": null,
+        "pergunta": null,
+        "suspense": null,
+        "acerto": null,
+        "erro": null,
+        "timeout": null,
+        "ajuda": null,
+        "vitoria": null,
+        "parar": null
+    }
+}
