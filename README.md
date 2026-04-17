@@ -1,4 +1,4 @@
-# 🎯 Show de Questão
+# 🎯 Show de Revisão
 
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 ![Licença](https://img.shields.io/badge/licença-MIT-blue)
@@ -8,7 +8,7 @@
 
 Inspirado por minha esposa, que é professora, desenvolvi este programa para que ela possa utilizar em dinâmicas em sala de aula.
 
-**Show de Questão** é um aplicativo de quiz interativo inspirado no programa de TV "Show do Milhão" (SBT), desenvolvido para uso em **salas de aula** e **brincadeiras entre amigos**.
+**Show de Revisão** é um aplicativo de quiz interativo inspirado no programa de TV "Show do Milhão" (SBT), desenvolvido para uso em **salas de aula** e **brincadeiras entre amigos**.
 
 O professor (apresentador) controla o jogo por uma janela, enquanto os alunos veem as perguntas e alternativas em outra janela (projetada em telão ou TV).
 
@@ -34,8 +34,8 @@ O professor (apresentador) controla o jogo por uma janela, enquanto os alunos ve
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/show-de-questao.git
-cd show-de-questao
+git clone https://github.com/seu-usuario/show-de-revisao.git
+cd show-de-revisao
 
 # Instale as dependências do frontend
 npm install
@@ -59,7 +59,7 @@ npm run tauri build
 ## 📂 Estrutura do Projeto
 
 ```
-show_de_questao/
+show_de_revisao/
 ├── src-tauri/              # Backend Rust + Tauri
 │   ├── src/
 │   │   ├── main.rs         # Entry point

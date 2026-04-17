@@ -1,6 +1,6 @@
 # Caminho relativo: Makefile
 # ============================================================================
-# Show de Questão — Makefile
+# Show de Revisão — Makefile
 # ============================================================================
 # Comandos utilitários para desenvolvimento, build e distribuição do projeto.
 #
@@ -60,7 +60,7 @@ COLOR_RED    := \033[1;31m
 help:
 	@echo ""
 	@echo "$(COLOR_CYAN)╔══════════════════════════════════════════════════════════════╗$(COLOR_RESET)"
-	@echo "$(COLOR_CYAN)║         🎯  Show de Questão — Comandos Disponíveis          ║$(COLOR_RESET)"
+	@echo "$(COLOR_CYAN)║         🎯  Show de Revisão — Comandos Disponíveis          ║$(COLOR_RESET)"
 	@echo "$(COLOR_CYAN)╚══════════════════════════════════════════════════════════════╝$(COLOR_RESET)"
 	@echo ""
 	@echo "$(COLOR_GREEN)  Desenvolvimento:$(COLOR_RESET)"
@@ -125,7 +125,7 @@ install:
 
 ## Inicia o ambiente de desenvolvimento completo (Tauri + Vite + HMR)
 dev:
-	@echo "$(COLOR_CYAN)🚀 Iniciando Show de Questão em modo desenvolvimento...$(COLOR_RESET)"
+	@echo "$(COLOR_CYAN)🚀 Iniciando Show de Revisão em modo desenvolvimento...$(COLOR_RESET)"
 	$(TAURI_CLI) dev
 
 ## Inicia apenas o servidor de desenvolvimento do frontend (Vite)
@@ -204,7 +204,7 @@ build-windows:
 	@echo "$(COLOR_YELLOW)⚠  Requer: mingw-w64 instalado (sudo apt install gcc-mingw-w64-x86-64)$(COLOR_RESET)"
 	$(TAURI_CLI) build --target $(TARGET_WINDOWS_GNU) --no-bundle
 	@echo "$(COLOR_GREEN)✅ Build Windows x86_64 concluído!$(COLOR_RESET)"
-	@echo "$(COLOR_CYAN)📦 Executável em: $(SRC_TAURI)/target/$(TARGET_WINDOWS_GNU)/release/show-de-questao.exe$(COLOR_RESET)"
+	@echo "$(COLOR_CYAN)📦 Executável em: $(SRC_TAURI)/target/$(TARGET_WINDOWS_GNU)/release/show-de-revisao.exe$(COLOR_RESET)"
 
 ## Build para macOS x86_64 (Intel) — executável standalone
 build-macos:
@@ -213,7 +213,7 @@ build-macos:
 	@echo "$(COLOR_YELLOW)⚠  Cross-compile para macOS só funciona nativamente em macOS$(COLOR_RESET)"
 	$(TAURI_CLI) build --target $(TARGET_MACOS_X86) --no-bundle
 	@echo "$(COLOR_GREEN)✅ Build macOS x86_64 concluído!$(COLOR_RESET)"
-	@echo "$(COLOR_CYAN)📦 Executável em: $(SRC_TAURI)/target/$(TARGET_MACOS_X86)/release/show-de-questao$(COLOR_RESET)"
+	@echo "$(COLOR_CYAN)📦 Executável em: $(SRC_TAURI)/target/$(TARGET_MACOS_X86)/release/show-de-revisao$(COLOR_RESET)"
 
 ## Build para macOS aarch64 (Apple Silicon — M1/M2/M3/M4) — executável standalone
 build-macos-arm:
@@ -222,7 +222,7 @@ build-macos-arm:
 	@echo "$(COLOR_YELLOW)⚠  Cross-compile para macOS só funciona nativamente em macOS$(COLOR_RESET)"
 	$(TAURI_CLI) build --target $(TARGET_MACOS_ARM) --no-bundle
 	@echo "$(COLOR_GREEN)✅ Build macOS Apple Silicon concluído!$(COLOR_RESET)"
-	@echo "$(COLOR_CYAN)📦 Executável em: $(SRC_TAURI)/target/$(TARGET_MACOS_ARM)/release/show-de-questao$(COLOR_RESET)"
+	@echo "$(COLOR_CYAN)📦 Executável em: $(SRC_TAURI)/target/$(TARGET_MACOS_ARM)/release/show-de-revisao$(COLOR_RESET)"
 
 ## Build para todos os sistemas operacionais (requer todas as toolchains)
 build-all: build-linux build-windows build-macos build-macos-arm
@@ -232,9 +232,9 @@ build-all: build-linux build-windows build-macos build-macos-arm
 	@echo "$(COLOR_GREEN)══════════════════════════════════════════════════════════════$(COLOR_RESET)"
 	@echo ""
 	@echo "  Linux:          $(BUNDLE_DIR)/ (DEB, RPM, AppImage)"
-	@echo "  Windows:        $(SRC_TAURI)/target/$(TARGET_WINDOWS_GNU)/release/show-de-questao.exe"
-	@echo "  macOS (Intel):  $(SRC_TAURI)/target/$(TARGET_MACOS_X86)/release/show-de-questao"
-	@echo "  macOS (ARM):    $(SRC_TAURI)/target/$(TARGET_MACOS_ARM)/release/show-de-questao"
+	@echo "  Windows:        $(SRC_TAURI)/target/$(TARGET_WINDOWS_GNU)/release/show-de-revisao.exe"
+	@echo "  macOS (Intel):  $(SRC_TAURI)/target/$(TARGET_MACOS_X86)/release/show-de-revisao"
+	@echo "  macOS (ARM):    $(SRC_TAURI)/target/$(TARGET_MACOS_ARM)/release/show-de-revisao"
 	@echo ""
 	@echo "$(COLOR_YELLOW)  💡 Para CI/CD multiplataforma, considere usar GitHub Actions$(COLOR_RESET)"
 	@echo "$(COLOR_YELLOW)     com runners nativos para cada SO.$(COLOR_RESET)"

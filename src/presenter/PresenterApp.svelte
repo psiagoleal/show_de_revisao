@@ -56,7 +56,7 @@
 
 <main class="presenter">
     <header class="presenter-header">
-        <h1>🎯 {gameState?.config.titulo ?? "Show de Questão"}</h1>
+        <h1>🎯 {gameState?.config.titulo ?? "Show de Revisão"}</h1>
         <span class="subtitle">Painel do Apresentador</span>
     </header>
 

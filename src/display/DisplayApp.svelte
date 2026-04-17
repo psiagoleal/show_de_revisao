@@ -46,7 +46,7 @@
         <div class="waiting-screen">
             <div class="waiting-content">
                 <div class="logo-icon">🎯</div>
-                <h1>{gameState?.config.titulo ?? "Show de Questão"}</h1>
+                <h1>{gameState?.config.titulo ?? "Show de Revisão"}</h1>
                 <p>Aguardando o apresentador iniciar o jogo...</p>
                 <div class="loading-dots">
                     <span class="dot"></span>

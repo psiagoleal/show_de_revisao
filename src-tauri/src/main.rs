@@ -7,5 +7,5 @@
 /// \author Iago Souza
 
 fn main() {
-    show_de_questao_lib::run()
+    show_de_revisao_lib::run()
 }

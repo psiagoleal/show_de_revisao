@@ -27,7 +27,7 @@ try {
     if (target) {
         target.innerHTML = `
       <div style="padding: 2rem; color: #f44336; font-family: monospace; background: #1a1a2e;">
-        <h1 style="color: #f4a020;">⚠️ Erro ao iniciar Show de Questão</h1>
+        <h1 style="color: #f4a020;">⚠️ Erro ao iniciar Show de Revisão</h1>
         <pre style="white-space: pre-wrap; margin-top: 1rem; color: #ff6b6b;">${err instanceof Error ? err.message : String(err)}</pre>
         <pre style="white-space: pre-wrap; margin-top: 0.5rem; color: #888; font-size: 0.8rem;">${err instanceof Error && err.stack ? err.stack : ""}</pre>
         <p style="margin-top: 1rem; color: #b0c4de;">Verifique o console (F12) para mais detalhes.</p>

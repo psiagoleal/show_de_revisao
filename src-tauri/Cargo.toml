@@ -1,12 +1,12 @@
 [package]
-name = "show-de-questao"
+name = "show-de-revisao"
 version = "0.1.0"
 description = "Quiz game inspired by Show do Milhão"
 authors = ["Iago Souza"]
 edition = "2021"
 
 [lib]
-name = "show_de_questao_lib"
+name = "show_de_revisao_lib"
 crate-type = ["lib", "cdylib", "staticlib"]
 
 [build-dependencies]

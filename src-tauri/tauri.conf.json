@@ -1,5 +1,5 @@
 {
-    "productName": "Show de Questão",
+    "productName": "Show de Revisão",
     "version": "0.1.0",
     "identifier": "com.showdequestao.desktop",
     "build": {
@@ -12,7 +12,7 @@
         "windows": [
             {
                 "label": "presenter",
-                "title": "Show de Questão - Controle do Apresentador",
+                "title": "Show de Revisão - Controle do Apresentador",
                 "url": "/index.html",
                 "width": 1024,
                 "height": 768,
@@ -21,7 +21,7 @@
             },
             {
                 "label": "display",
-                "title": "Show de Questão - Apresentação",
+                "title": "Show de Revisão - Apresentação",
                 "url": "/display.html",
                 "width": 1280,
                 "height": 720,
