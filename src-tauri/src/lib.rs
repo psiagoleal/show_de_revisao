@@ -1,10 +1,11 @@
 // Caminho relativo: src-tauri/src/lib.rs
 /// \file src-tauri/src/lib.rs
-/// \brief Main library - Tauri application setup
+/// \brief Main library — Tauri application setup
 /// \author Iago Souza
 pub mod commands;
 pub mod config;
 pub mod game;
+pub mod history;
 
 use commands::AppState;
 use std::sync::Mutex;
@@ -14,8 +15,10 @@ use std::sync::Mutex;
 pub fn run() {
     tauri::Builder::default()
         .plugin(tauri_plugin_shell::init())
+        .plugin(tauri_plugin_dialog::init())
         .manage(AppState {
             game: Mutex::new(None),
+            base_path: Mutex::new(None),
         })
         .invoke_handler(tauri::generate_handler![
             commands::carregar_jogo,
@@ -33,6 +36,8 @@ pub fn run() {
             commands::tick_timer,
             commands::reiniciar_jogo,
             commands::obter_estado,
+            commands::obter_info_historico,
+            commands::resetar_historico,
         ])
         .run(tauri::generate_context!())
         .expect("Erro ao executar a aplicação Tauri");

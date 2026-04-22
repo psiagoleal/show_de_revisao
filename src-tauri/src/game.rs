@@ -78,6 +78,8 @@ pub struct GameState {
     /// Pool completo de todas as perguntas disponíveis
     #[serde(skip_serializing)]
     pub todas_perguntas: Vec<Pergunta>,
+    /// Caminho absoluto do arquivo de perguntas (chave para o histórico)
+    pub arquivo_perguntas: String,
     /// Índices das perguntas já utilizadas nesta sessão (persiste entre partidas)
     pub indices_usados: Vec<usize>,
     /// Total de perguntas no pool
@@ -116,15 +118,23 @@ pub struct GameState {
 
 impl GameState {
     /// Cria um novo estado de jogo
-    pub fn new(config: GameConfig, todas_perguntas: Vec<Pergunta>) -> Self {
+    pub fn new(
+        config: GameConfig,
+        todas_perguntas: Vec<Pergunta>,
+        arquivo_perguntas: String,
+        indices_usados_iniciais: Vec<usize>,
+    ) -> Self {
         let total_pool = todas_perguntas.len();
+        let usados_count = indices_usados_iniciais.len().min(total_pool);
+        let pool_restante = total_pool.saturating_sub(usados_count);
         Self {
             config,
             perguntas: Vec::new(),
             todas_perguntas,
-            indices_usados: Vec::new(),
+            arquivo_perguntas,
+            indices_usados: indices_usados_iniciais,
             total_pool,
-            pool_restante: total_pool,
+            pool_restante,
             pool_resetado: false,
             pergunta_atual: 0,
             premio_acumulado: 0,
@@ -520,10 +530,9 @@ impl GameState {
         let config = self.config.clone();
         let todas_perguntas = self.todas_perguntas.clone();
         let indices_usados = self.indices_usados.clone();
+        let arquivo_perguntas = self.arquivo_perguntas.clone();
 
-        *self = GameState::new(config, todas_perguntas);
-        self.indices_usados = indices_usados;
-        self.pool_restante = self.todas_perguntas.len() - self.indices_usados.len();
+        *self = GameState::new(config, todas_perguntas, arquivo_perguntas, indices_usados);
     }
 
     /// Retorna a pergunta atual

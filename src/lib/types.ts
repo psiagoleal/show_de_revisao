@@ -94,10 +94,21 @@ export interface CartasResult {
     alternativas_visiveis: string[];
 }
 
+/** Informações de histórico para um arquivo de perguntas */
+export interface InfoHistorico {
+    arquivo: string;
+    nome_arquivo: string;
+    total: number;
+    usados: number;
+    disponiveis: number;
+}
+
 /** Estado completo do jogo */
 export interface GameState {
     config: GameConfig;
     perguntas: Pergunta[];
+    /** Caminho absoluto do arquivo de perguntas (chave para o histórico) */
+    arquivo_perguntas: string;
     pergunta_atual: number;
     premio_acumulado: number;
     premio_garantido: number;

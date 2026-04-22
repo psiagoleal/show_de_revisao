@@ -4,13 +4,19 @@
 /// \author Iago Souza
 
 import { invoke } from "@tauri-apps/api/core";
-import type { GameState } from "./types";
+import type { GameState, InfoHistorico } from "./types";
 
 /**
- * Carrega o jogo a partir dos arquivos config.json e perguntas.json
+ * Carrega o jogo a partir dos arquivos config.json e do arquivo de perguntas escolhido.
+ * @param perguntas_path - Caminho absoluto para o arquivo de perguntas JSON.
+ *   Se vazio ou omitido, usa o arquivo padrão `perguntas.json` ao lado do executável.
  */
-export async function carregarJogo(): Promise<GameState> {
-    return await invoke<GameState>("carregar_jogo");
+export async function carregarJogo(
+    perguntas_path: string = "",
+): Promise<GameState> {
+    return await invoke<GameState>("carregar_jogo", {
+        perguntasPath: perguntas_path,
+    });
 }
 
 /**
@@ -117,4 +123,23 @@ export async function submeterVotos(
  */
 export async function obterEstado(): Promise<GameState | null> {
     return await invoke<GameState | null>("obter_estado");
+}
+
+/**
+ * Obtém informações de histórico para um arquivo de perguntas específico.
+ * @param arquivo - Caminho absoluto do arquivo de perguntas JSON.
+ */
+export async function obterInfoHistorico(
+    arquivo: string,
+): Promise<InfoHistorico> {
+    return await invoke<InfoHistorico>("obter_info_historico", { arquivo });
+}
+
+/**
+ * Reseta o histórico de perguntas usadas para um arquivo específico.
+ * Após o reset, todas as perguntas do arquivo estarão disponíveis novamente.
+ * @param arquivo - Caminho absoluto do arquivo de perguntas JSON.
+ */
+export async function resetarHistorico(arquivo: string): Promise<void> {
+    return await invoke<void>("resetar_historico", { arquivo });
 }
